@@ -50,7 +50,7 @@ def tensorsToB64Png(tensors):
 
 class GenerateImage:
     @classmethod
-    def IS_CHANGED(s, prompt, model, size, step, strength, seeed, batch, image=None):
+    def IS_CHANGED(s, prompt, model, size, step, strength, seed, batch, image=None):
         return float("NaN")
 
     @classmethod
@@ -62,7 +62,7 @@ class GenerateImage:
                     "size": ( IMAGE_SIZE, {"default": "1024x1024"}),
                     "step": ("INT", {"default": 30}),
                     "strength": ("FLOAT", {"default": 1.0, "min": 0.0, "max": 1.0, "step": 0.05}),
-                    "seeed": ("INT", {"default": 43}),
+                    "seed": ("INT", {"default": 43}),
                     "batch": ("INT", {"default": 1}),
                   },
                 "optional": {
@@ -75,7 +75,7 @@ class GenerateImage:
     CATEGORY = "NanoGPT"
     FUNCTION = "f"
 
-    def f(self, prompt, model, size, step, strength, seeed, batch, image=None):
+    def f(self, prompt, model, size, step, strength, seed, batch, image=None):
 
       if batch > 5:
         raise Exception('Batch size is more than 5, may be too much?')
@@ -89,7 +89,7 @@ class GenerateImage:
           "prompt": prompt,
           "size": size,
           "strength": strength,
-          "seed": seeed,
+          "seed": seed,
           "n": batch,
           "num_inference_steps": step,
           "response_format": "b64_json",
