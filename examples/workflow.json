@@ -1,0 +1,232 @@
+{
+  "id": "cc56c388-a0cd-48d8-8576-84af6d162097",
+  "revision": 0,
+  "last_node_id": 7,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "easy mathInt",
+      "pos": [
+        -100.4018597305954,
+        4.88856056916567
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "widget": {
+            "name": "a"
+          },
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.4",
+        "Node name for S&R": "easy mathInt"
+      },
+      "widgets_values": [
+        0,
+        10000000000,
+        "divide"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "easy seed",
+      "pos": [
+        -99.40769555056606,
+        -181.21883223799136
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-easy-use",
+        "ver": "1.3.4",
+        "Node name for S&R": "easy seed"
+      },
+      "widgets_values": [
+        739039934276115,
+        "randomize",
+        null
+      ]
+    },
+    {
+      "id": 4,
+      "type": "SaveImage",
+      "pos": [
+        727.122543339356,
+        -243.21265824243324
+      ],
+      "size": [
+        362.5837324943186,
+        376.5220924533944
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2",
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "NanoGPT - Image Generation",
+      "pos": [
+        250.51478585665768,
+        -243.94975901447026
+      ],
+      "size": [
+        401.698823202363,
+        378.09548394543197
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "seeed",
+          "type": "INT",
+          "widget": {
+            "name": "seeed"
+          },
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "myonmu0/ComfyUI-NanoGPT_ImageGeneration",
+        "ver": "8ff453f9044f4b72c0b0c89e914f8f00ee2bdc18",
+        "Node name for S&R": "NanoGPT - Image Generation"
+      },
+      "widgets_values": [
+        "apple",
+        "qwen-image",
+        "1024x1024",
+        30,
+        1,
+        43,
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "INT"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      1,
+      "INT"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Seed",
+      "bounding": [
+        -118.50072757285542,
+        -262.68342295023086,
+        304.78208554707066,
+        389.17879165257494
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7400249944260057,
+      "offset": [
+        287.6250378418685,
+        555.8577800506081
+      ]
+    },
+    "workflowRendererVersion": "LG",
+    "frontendVersion": "1.41.20",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
