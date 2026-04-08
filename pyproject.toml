@@ -1,0 +1,14 @@
+[project]
+name = "ComfyUI-NanoGPT_ImageGeneration"
+description = "Custom node to generate a image using NanoGPT API"
+version = "0.9.0"
+license = {file = "LICENSE"}
+dependencies  = []
+
+[project.urls]
+Repository = "https://github.com/myonmu0/ComfyUI-NanoGPT_ImageGeneration"
+
+[tool.comfy]
+PublisherId = "myonmu0"
+DisplayName = "ComfyUI-NanoGPT_ImageGeneration"
+Icon = ""
