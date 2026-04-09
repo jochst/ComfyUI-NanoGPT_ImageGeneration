@@ -1,8 +1,8 @@
 {
   "id": "e573dd4e-a6c5-429c-a64b-0153cbe730c5",
   "revision": 0,
-  "last_node_id": 10,
-  "last_link_id": 9,
+  "last_node_id": 13,
+  "last_link_id": 12,
   "nodes": [
     {
       "id": 4,
@@ -22,7 +22,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 3
+          "link": 11
         }
       ],
       "outputs": [],
@@ -36,15 +36,49 @@
       ]
     },
     {
-      "id": 3,
-      "type": "NanoGPT - Image Generation",
+      "id": 9,
+      "type": "SystemRandomInt",
       "pos": [
-        250.51478585665768,
-        -243.94975901447026
+        -90.65310599240551,
+        31.25398519031079
       ],
       "size": [
-        401.698823202363,
-        378.09548394543197
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-logicutils",
+        "ver": "1.7.2",
+        "Node name for S&R": "SystemRandomInt"
+      },
+      "widgets_values": [
+        0,
+        1000000
+      ]
+    },
+    {
+      "id": 13,
+      "type": "NanoGPT - Image Generation",
+      "pos": [
+        277.2998190642943,
+        -237.1010842830998
+      ],
+      "size": [
+        376.83479140292707,
+        370.28948346130557
       ],
       "flags": {},
       "order": 1,
@@ -62,7 +96,7 @@
           "widget": {
             "name": "seed"
           },
-          "link": 9
+          "link": 12
         }
       ],
       "outputs": [
@@ -70,13 +104,13 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            3
+            11
           ]
         }
       ],
       "properties": {
         "aux_id": "myonmu0/ComfyUI-NanoGPT_ImageGeneration",
-        "ver": "8ff453f9044f4b72c0b0c89e914f8f00ee2bdc18",
+        "ver": "5febfd49522d1214b8220d7620fa66c7b60d6a9e",
         "Node name for S&R": "NanoGPT - Image Generation"
       },
       "widgets_values": [
@@ -85,60 +119,25 @@
         "1024x1024",
         30,
         1,
-        43,
-        1,
-        1
-      ]
-    },
-    {
-      "id": 9,
-      "type": "SystemRandomInt",
-      "pos": [
-        -96.39654923875547,
-        32.530302124891996
-      ],
-      "size": [
-        270,
-        82
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            9
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-logicutils",
-        "ver": "1.7.2",
-        "Node name for S&R": "SystemRandomInt"
-      },
-      "widgets_values": [
-        0,
-        1000000
+        73,
+        "randomize"
       ]
     }
   ],
   "links": [
     [
-      3,
-      3,
+      11,
+      13,
       0,
       4,
       0,
       "IMAGE"
     ],
     [
-      9,
+      12,
       9,
       0,
-      3,
+      13,
       1,
       "INT"
     ]
@@ -148,8 +147,8 @@
       "id": 1,
       "title": "Seed",
       "bounding": [
-        -113.58688862990981,
-        -54.19626440445519,
+        -107.84344538355985,
+        -55.47258133903639,
         300.5702021733367,
         186.30744636376437
       ],
@@ -161,10 +160,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7400249944260057,
+      "scale": 0.8954302432554679,
       "offset": [
-        306.60416159679147,
-        570.8847971334702
+        185.1973724122526,
+        472.3229898747844
       ]
     },
     "frontendVersion": "1.41.20",

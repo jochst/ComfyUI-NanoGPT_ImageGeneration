@@ -1,7 +1,7 @@
 [project]
 name = "ComfyUI-NanoGPT_ImageGeneration"
 description = "Custom node to generate a image using NanoGPT API"
-version = "0.9.0"
+version = "0.9.1"
 license = {file = "LICENSE"}
 dependencies  = []
 
