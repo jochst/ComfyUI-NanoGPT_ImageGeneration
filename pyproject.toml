@@ -6,7 +6,7 @@ license = {file = "LICENSE"}
 dependencies  = []
 
 [project.urls]
-Repository = "https://github.com/myonmu0/ComfyUI-NanoGPT_ImageGeneration"
+Repository = "https://github.com/jochst/ComfyUI-NanoGPT_ImageGeneration"
 
 [tool.comfy]
 PublisherId = "myonmu0"

@@ -6,7 +6,7 @@ I made this to use the image models included on 8$ plan, but may work with other
 1. Install the node
 ```
 cd ComfyUI/custom_nodes/
-git clone https://github.com/myonmu0/ComfyUI-NanoGPT_ImageGeneration
+git clone https://github.com/jochst/ComfyUI-NanoGPT_ImageGeneration
 ```
 
 2. Put your NanoGPT API key in `api_key.txt` in this folder (bare key), or set the `NANOGPT_API_KEY` env var.
